@@ -1,0 +1,70 @@
+.FirstSection{
+    position: relative;
+
+    &Line{
+        position: absolute;
+        top: 0;
+        left: 15%;
+        z-index: -1;
+    }  
+    
+    &Content{
+
+        & .Header{
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            h1{
+                transform-origin: 50% 50%;
+                transform: translate(0px, 0px);
+                transform-style: preserve-3d;
+                perspective: 1000px;
+                font-weight: 600;
+                font-size: 6vw;
+                line-height: 90%;
+                letter-spacing: -.05em;
+            }
+
+            .BookButton{
+                font-size: 1.5rem;
+                color: white;
+                width: 280px;
+                height: 66px;
+                border-radius: 50px;
+                align-items: center;
+                justify-content: center;
+
+                #text{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg{
+                        padding-left: 10px;
+                    }
+
+                }
+
+            }
+        }
+
+        & .Body{
+            margin-top: -50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            video{
+                width: 395px;
+                height: 395px;
+                border-radius: 50% 50%;
+            }
+        }
+
+    }
+
+}

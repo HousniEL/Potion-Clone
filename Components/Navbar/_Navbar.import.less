@@ -1,0 +1,109 @@
+.HeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 30px;
+    position: fixed;
+    width: calc(100% - 60px);
+    z-index: 5;
+
+    &Logo{
+        width: 120px;
+        height: 40px;
+        text-decoration: none;
+        color: black;
+    }
+
+    &Urls{
+        padding: 15px 20px;
+        background-color: white;
+        border-radius: 25px;
+        color: #000;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -.02em;
+        transition: color .1s ease;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        & a{
+            margin: 0 15px;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover{
+                color: @firstColor;
+            }
+        }
+    }
+
+    &Right{
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 170px;
+        justify-content: center;
+
+        & .LogIn{
+            color: #000;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: -.02em;
+            cursor: pointer;
+            transition: color .1s ease;
+            margin: 0 25px;
+            position: fixed;
+            right: 200px;
+            padding: 15px;
+            z-index: 2;
+
+            &:hover{
+                color: @firstColor;
+            }
+
+        }
+    }
+}
+
+
+.BookButton{
+    background-color: @firstColor;
+    height: 46px;
+    width: 160px;
+    border-radius: 25px;
+    color: white;
+    font-size: 1rem;
+    font-family: "Poppins"; 
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    & #text{
+        text-align: center;
+        width: inherit;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    & .bg-h{
+        height: 46px;
+        width: 170px;
+        border-radius: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        transform: translateX(-100%);
+    }
+
+}

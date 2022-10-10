@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { HomePage } from "../Components/HomePage";
+
+import "./App.less";
 
 function App() {
+
+  useEffect(() => {
+    window.onmousemove = function(event: any){
+        const { clientX, clientY } = event;
+        const mouseTrakcer: any = document.getElementById("MouseTracker");
+        if (getComputedStyle(event.target).cursor === "pointer") {
+          mouseTrakcer.classList.add("small");
+        } else {
+          mouseTrakcer.classList.remove("small");
+        }
+        mouseTrakcer.style.transform = `translate(${clientX - 6}px, ${clientY - 8}px)`;
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div id="MouseTracker"></div>
+      <div className="app">
+        <HomePage />
+      </div>
+    </>
   );
 }
 

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@firstColor: #8330c2;
+
+@import "../Components/Navbar/_Navbar.import.less";
+@import "../Components/HomePage/_HomePage.import.less";
+@import "../Components/FirstSection/_FirstSection.import.less";
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    overflow: hidden;
+}
+
+.app {
+    height: 100vh;
+    overflow: hidden;
+    font-family: Montserrat, sans-serif;
+    background-color: rgba(131, 48, 192, 0.05);
+
+    * {
+        outline: none !important;
+    }
+}
+
+#MouseTracker{
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background-color: @firstColor;
+    position: absolute;
+    transition: all .15s ease-out;
+
+    &.small{
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+    }
+
+}
